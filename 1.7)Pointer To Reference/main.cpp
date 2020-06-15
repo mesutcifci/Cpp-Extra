@@ -2,28 +2,27 @@
 
 void function1(int* p) {
     std::cout << "function1 called" << "\n";
-    *p = 20;
+    p = new int;
 }
 
 void function2(int*& p) {
     std::cout << "function2 called" << "\n";
-    *p = 30;
+    p = new int;
 }
 
 
 
 int main()
 {
-    int number = 10;
-    int *ptr = &number;
+    int *ptr = nullptr;
 
-    std::cout << "number = " << number << "\n";
+
 
     function1(ptr);
-    std::cout << "number = " << number << "\n";
+    std::cout << "adress = " << ptr << "\n";
 
     function2(ptr);
-    std::cout << "number = " << number << "\n";
+    std::cout << "adress = " << ptr << "\n";
 
 
     return 0;
